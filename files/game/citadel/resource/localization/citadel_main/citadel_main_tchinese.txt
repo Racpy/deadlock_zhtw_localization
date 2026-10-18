@@ -353,6 +353,7 @@
 
 		"Citadel_Hud_Paused"										"遊戲已暫停"
 		"Citadel_Hud_AutoFire"										"自動射擊"
+		"Citadel_Hud_HealingMode"									"治療針"
 		"Citadel_Hud_Pauser"										"（由 {s:pauser} 暫停）"
 		"Citadel_Hud_Unpausing"										"遊戲即將繼續"
 		"Citadel_Notification_Paused_Title"							"已暫停"
@@ -398,6 +399,7 @@
 		"Citadel_Hud_DamageMeter_DurationValue"						"{f:1:damage_meter_duration} 秒"
 		"Citadel_Hud_RespawnIn"										"重生倒數："
 		"Citadel_Hud_RideZipLine"									"按住 {g:citadel_binding:'Zipline'} 搭乘"
+		"Citadel_Hud_RideZipLineUnHoldRequired"						"飛行中停用"
 		"Citadel_Hud_RideZipLineOnCooldownValue"					"{f:1:cooldown_seconds} 秒"
 		"Citadel_Hud_RideZipLineOnCooldown"							"受到傷害後暫時無法使用"
 		"Citadel_Hud_CaptureZipLine"								"按住{g:citadel_binding:'HeldItem'}"
@@ -446,6 +448,7 @@
 		"Citadel_Hud_Quickbuy_Instructional_Ready"					"按下 {g:citadel_binding:'PurchaseQuickbuy'} 購買"
 		"Citadel_Hud_Quickbuy_QueueSize"							"{i:queue_size}"
 		"Citadel_Hud_Quickbuy_ItemsReady"							"{i:items_ready}"
+		"Citadel_Hud_Quickbuy_ItemSlotsLocked"						"欄位已鎖定"
 		"Citadel_Hud_Quickbuy_ToastLabel_Purchase"					"已購買道具"
 		"Citadel_Hud_Quickbuy_ToastLabel_Sell"						"已出售道具"
 		"Citadel_Hud_Quickbuy_Tooltip"								"你可以點擊購買其中任何一件道具，或在商店範圍內按下 {g:citadel_binding:'PurchaseQuickbuy'} 購買下一件快速購買道具。"
@@ -2687,7 +2690,9 @@
 
 		"ShopFilter_HintSecondary"				"按下 {g:citadel_key:'MOUSE1'} 選擇單一篩選條件。<br>按下 {g:citadel_key:'MOUSE2'} 選擇多個篩選條件"
 
-		"Minimap_HintControls"					"按住 {g:citadel_key:'MOUSE1'} 或 {g:citadel_binding:'Ping'} 開啟小地圖標記輪盤。<br>按住 {g:citadel_key:'MOUSE2'} 在小地圖上繪圖。"
+		"Minimap_HintControls_MinimapPing"	"{g:citadel_key:'MOUSE1'} / {g:citadel_binding:'Ping'}：標記"
+		"Minimap_HintControls_MinimapRadialMenu"	"按住 {g:citadel_key:'MOUSE1'} / {g:citadel_binding:'Ping'}：標記輪盤"
+		"Minimap_HintControls_MinimapDrawing"		"{g:citadel_key:'MOUSE2'}：在小地圖上繪圖"
 
 		"EShopFilterItemWeapon"					"武器道具"
 		"EShopFilterItemSpirit"					"精神道具"
@@ -5223,7 +5228,7 @@
 
 		"Sandbox_Tutorial_Controls_Cast"			"施放"
 		"Sandbox_Tutorial_Controls_Upgraded"		"升級"
-		"Sandbox_Tutorial_Controls_PurchaseMods"	"購買遞增暴露"
+		"Sandbox_Tutorial_Controls_PurchaseMods"	"購買{g:citadel_ability_name:'upgrade_escalating_exposure'}"
 		"Sandbox_Tutorial_Controls_CloseShop"		"關閉商店"
 		"Sandbox_Tutorial_Controls_DestroyGuardian"	"守衛者已摧毀"
 
@@ -5870,6 +5875,7 @@
 		"Citadel_Hideout_VaultHint01"				"{g:citadel_binding:'AbilityMelee'} 近戰可收集靈魂"
 		"Citadel_Hideout_VaultHint02"				"{g:citadel_binding:'AbilityMelee'} 燈光閃爍時近戰可獲得加成，重擊則更多"
 		"Citadel_Hideout_HolidayChallenge" 		"按下 {g:citadel_binding:'Interact'} 查看假日挑戰進度"
+		"Citadel_Hideout_HeavyCrate"		"按住 {g:citadel_binding:'AbilityMelee'} 以重擊打破"
 
 		"citadel_keybind_hideout_use"					"與藏身處物件互動"
 		"citadel_keybind_hideout_news"					"顯示近期新聞"
