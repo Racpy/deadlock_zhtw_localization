@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "version": "20f7f9904f7f",
+  "files": [
+    {
+      "path": "game/citadel/resource/localization/citadel_attributes/citadel_attributes_tchinese.txt",
+      "sha256": "108a22c85fc0b4b938819caf7295096c5571c2836d7d131a9a04161e343e12de",
+      "size": 128718
+    },
+    {
+      "path": "game/citadel/resource/localization/citadel_gc_mod_names/citadel_gc_mod_names_tchinese.txt",
+      "sha256": "40a2e99d3f49f4b7e8cada0e6c7112de1ff69f732c11b0a7762f50ede887a1af",
+      "size": 24191
+    },
+    {
+      "path": "game/citadel/resource/localization/citadel_generated_vo/citadel_generated_vo_tchinese.txt",
+      "sha256": "14844fdbd1bc127ece7aeb0f422e2455a68c09eee7b40b9e235c884ca2f35bf1",
+      "size": 5062144
+    },
+    {
+      "path": "game/citadel/resource/localization/citadel_heroes/citadel_heroes_tchinese.txt",
+      "sha256": "5af749532f9eec415aab8468869fd0184c7998eb48e6911565044dd44733999b",
+      "size": 433362
+    },
+    {
+      "path": "game/citadel/resource/localization/citadel_main/citadel_main_tchinese.txt",
+      "sha256": "7eaca16fafd2e408f10b559f29b700480876617e787e08b57ba371aca1fd2fc7",
+      "size": 406024
+    },
+    {
+      "path": "game/citadel/resource/localization/citadel_mods/citadel_mods_tchinese.txt",
+      "sha256": "4489aa02c2bf99cdfe8c35c98b18eb242a5182c293652488ae3e7277785ce0c5",
+      "size": 68088
+    },
+    {
+      "path": "game/citadel_tchinese/gameinfo.gi",
+      "sha256": "5ffcff75b665d2cc5fd42ce132cab7f0fd2387997e8d67dee44c21631cd6026e",
+      "size": 206
+    },
+    {
+      "path": "game/citadel_tchinese/pak01_dir.vpk",
+      "sha256": "b3615046aa248e1239831c0fb3aef9a51427161a64f59da53ca5bf7954897cc6",
+      "size": 1436131
+    }
+  ]
+}

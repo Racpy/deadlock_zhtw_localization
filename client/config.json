@@ -1,0 +1,18 @@
+{
+  "repoOwner": "Racpy",
+  "repoName": "deadlock_zhtw_localization",
+  "branch": "main",
+
+  "gamePath": "",
+
+  "patchGameInfo": true,
+  "patchFonts": true,
+
+  "appId": 1422450,
+  "timeoutSec": 8,
+  "maxTotalSec": 30,
+  "maxFileSizeMB": 20,
+
+  "allowedPrefixes": ["game/citadel/", "game/citadel_tchinese/"],
+  "allowedExtensions": [".txt", ".vpk", ".gi", ".conf"]
+}

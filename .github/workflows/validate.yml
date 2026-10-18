@@ -1,0 +1,19 @@
+name: Validate translation files
+
+# 有人發 PR 修改翻譯檔時，自動檢查格式
+on:
+  pull_request:
+    paths:
+      - "files/**"
+      - "tools/**"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check files
+        run: python3 tools/make_manifest.py --check

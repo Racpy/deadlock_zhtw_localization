@@ -1,0 +1,8 @@
+# 翻譯檔不做任何換行轉換，否則 SHA256 會和 manifest 對不上
+files/** -text
+
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.py  text eol=lf
+*.yml text eol=lf
+manifest.json text eol=lf
