@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "ecaf659ca634",
+  "version": "35f70aa58e2b",
   "files": [
     {
       "path": "game/citadel/resource/localization/citadel_attributes/citadel_attributes_tchinese.txt",
@@ -19,8 +19,8 @@
     },
     {
       "path": "game/citadel/resource/localization/citadel_heroes/citadel_heroes_tchinese.txt",
-      "sha256": "5af749532f9eec415aab8468869fd0184c7998eb48e6911565044dd44733999b",
-      "size": 433362
+      "sha256": "151ecaeb57c1d3d3fd6497ae7c017112a6c138f6f3c6b8420f450d3f29512bf6",
+      "size": 445750
     },
     {
       "path": "game/citadel/resource/localization/citadel_main/citadel_main_tchinese.txt",
