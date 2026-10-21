@@ -367,7 +367,6 @@ $FontsBlockBody = @'
 		</edit>
 	</match>
 '@
-$PatchedPaths  = @($GameInfoRel, $FontsRel)
 
 function Get-FontsDesiredBlock([string]$Nl) {
     $body = $FontsBlockBody -replace '\r?\n', $Nl
@@ -484,10 +483,6 @@ function Invoke-Update($Config, [string]$GameDir) {
             $failed++
             break
         }
-        if ($PatchedPaths | Where-Object { $_ -ieq [string]$f.path }) {
-            Write-Log "略過 manifest 內的 $($f.path)（此檔案改以補丁方式處理）" 'WARN'
-            continue
-        }
         $tmp = $null
         try {
             $dest = Resolve-TargetPath $GameDir $f.path $Config
@@ -537,8 +532,6 @@ function Invoke-Restore([string]$GameDir, $Config) {
         $relWin = $file.FullName.Substring($origRoot.Length).TrimStart('\')
         $isAbsent = $relWin.EndsWith('.absent')
         if ($isAbsent) { $relWin = $relWin.Substring(0, $relWin.Length - '.absent'.Length) }
-        $relPosix = $relWin -replace '\\', '/'
-        if ($PatchedPaths | Where-Object { $_ -ieq $relPosix }) { continue }   # 這類檔案已由補丁處理，不用舊備份覆蓋
         try {
             $dest = Resolve-TargetPath $GameDir ($relWin -replace '\\', '/') $Config
             if ($isAbsent) {

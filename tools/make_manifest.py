@@ -22,9 +22,6 @@ SCHEMA = 1
 DEFAULT_PREFIXES = ("game/citadel/", "game/citadel_tchinese/")
 DEFAULT_EXT = (".txt", ".vpk", ".gi", ".conf")
 VPK_MAGIC = b"\x34\x12\xaa\x55"  # VPK 檔頭 0x55AA1234（little-endian）
-# Valve 的檔案，每次遊戲更新都會變動，不能整檔放進 files/。
-# 更新器會在本機以補丁方式處理（gameinfo.gi 只加入 tchinese 語言；fonts.conf 只加入 zh-tw 字型規則）。
-PATCHED_BY_CLIENT = {"game/citadel/gameinfo.gi", "game/citadel/panorama/fonts/fonts.conf"}
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -135,9 +132,6 @@ def main() -> int:
             continue
         if not rel.startswith(prefixes):
             errors.append(f"{rel}：不在允許的目錄內（{', '.join(prefixes)}）")
-            continue
-        if rel in PATCHED_BY_CLIENT:
-            errors.append(f"{rel}：這是 Valve 的檔案，更新器以補丁方式處理，請勿放進 files/")
             continue
         if p.suffix.lower() not in exts:
             errors.append(f"{rel}：副檔名不在允許清單（{', '.join(exts)}）")
