@@ -8,14 +8,14 @@
 
 | 版本 | 檔案 | 適合 |
 |---|---|---|
-| **GUI 版**（推薦） | `Deadlock_zhTW_Updater_GUI.zip` | 想要視窗介面：偵測遊戲、檢查更新、複製 Steam 啟動選項、還原，全部用按的。Steam 啟動時**不會**在工作列留下黑視窗 |
-| **NoGUI 版** | `Deadlock_zhTW_Updater_NoGUI.zip` | 偏好純文字腳本（`.bat` + `.ps1`），內容全部可以直接檢視 |
+| **GUI 版**（推薦） | `Deadlock_zhtw_updater_gui.zip` | 想要視窗介面：偵測遊戲、檢查更新、複製 Steam 啟動選項、還原，全部用按的。Steam 啟動時**不會**在工作列留下黑視窗 |
+| **NoGUI 版** | `Deadlock_zhtw_updater_nogui.zip` | 偏好純文字腳本（`.bat` + `.ps1`），內容全部可以直接檢視 |
 
 兩種版本做的事完全一樣，擇一使用即可。
 
 ## 使用方式
 
-先把 zip **解壓縮到固定位置**（例如 `D:\Deadlock_zhTW_Updater`）。不要放在下載資料夾，也不要在壓縮檔內直接執行；之後搬動資料夾的話，Steam 啟動選項要重新設定。
+先把 zip **解壓縮到固定位置**（例如 `D:\Deadlock_zhtw_updater`）。不要放在下載資料夾，也不要在壓縮檔內直接執行；之後搬動資料夾的話，Steam 啟動選項要重新設定。
 
 ### GUI 版
 
