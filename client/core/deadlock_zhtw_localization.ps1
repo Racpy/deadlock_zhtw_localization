@@ -709,9 +709,15 @@ function Start-Gui {
     $form.MinimumSize = New-Object System.Drawing.Size(660, 600)
     $form.StartPosition = 'CenterScreen'
     $script:Form = $form
+    # 視窗左上角與工作列的圖示：編成 exe 時取自 exe 本身內嵌的圖示；以 .ps1 執行時才讀 app.ico
     try {
-        $icoPath = Join-Path $ScriptDir 'app.ico'   # 只有以 .ps1 執行時才用得到；exe 的圖示已內嵌
-        if (Test-Path -LiteralPath $icoPath) { $form.Icon = New-Object System.Drawing.Icon($icoPath) }
+        if (-not $PSScriptRoot) {
+            $exe = [System.Diagnostics.Process]::GetCurrentProcess().MainModule.FileName
+            $form.Icon = [System.Drawing.Icon]::ExtractAssociatedIcon($exe)
+        } else {
+            $icoPath = Join-Path $ScriptDir 'app.ico'
+            if (Test-Path -LiteralPath $icoPath) { $form.Icon = New-Object System.Drawing.Icon($icoPath) }
+        }
     } catch {}
 
     $root = New-Object System.Windows.Forms.TableLayoutPanel

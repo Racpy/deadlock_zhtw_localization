@@ -1,6 +1,6 @@
 ﻿# 產生兩種版本的發佈包，輸出到 dist/：
-#   Deadlock_zhTW_Updater_GUI.zip    圖形介面版（2 個 exe，需要 ps2exe，只能在 Windows 上編）
-#   Deadlock_zhTW_Updater_NoGUI.zip  命令列版（bat + ps1，不需要編譯）
+#   Deadlock_zhtw_updater_gui.zip    圖形介面版（2 個 exe，需要 ps2exe，只能在 Windows 上編）
+#   Deadlock_zhtw_updater_nogui.zip  命令列版（bat + ps1，不需要編譯）
 # 用法：  powershell -ExecutionPolicy Bypass -File tools\build_client.ps1 [-SkipGui]
 param([switch]$SkipGui)
 $ErrorActionPreference = 'Stop'
@@ -12,11 +12,11 @@ if (Test-Path $dist) { Remove-Item $dist -Recurse -Force }
 New-Item -ItemType Directory -Path $dist | Out-Null
 
 # ---------------- NoGUI
-$no = Join-Path $dist 'Deadlock_zhTW_Updater_NoGUI'
+$no = Join-Path $dist 'Deadlock_zhtw_updater_nogui'
 New-Item -ItemType Directory -Path $no | Out-Null
 Copy-Item $core $no
 Copy-Item (Join-Path $root 'client\nogui\*.bat') $no
-Compress-Archive -Path $no -DestinationPath (Join-Path $dist 'Deadlock_zhTW_Updater_NoGUI.zip')
+Compress-Archive -Path $no -DestinationPath (Join-Path $dist 'Deadlock_zhtw_updater_nogui.zip')
 Write-Host 'OK  NoGUI zip' -ForegroundColor Green
 
 if ($SkipGui) { return }
@@ -27,7 +27,7 @@ if (-not (Get-Module -ListAvailable -Name ps2exe)) {
 }
 Import-Module ps2exe
 
-$gui = Join-Path $dist 'Deadlock_zhTW_Updater_GUI'
+$gui = Join-Path $dist 'Deadlock_zhtw_updater_gui'
 New-Item -ItemType Directory -Path $gui | Out-Null
 $ico = Join-Path $root 'client\gui\app.ico'
 $common = @{ noConsole = $true; iconFile = $ico; company = 'deadlock_zhtw_localization'; version = '1.2.0.0' }
@@ -39,5 +39,5 @@ Invoke-ps2exe -inputFile $core -outputFile (Join-Path $gui 'deadlock_zhtw_update
 Invoke-ps2exe -inputFile (Join-Path $root 'client\gui\launcher.ps1') -outputFile (Join-Path $gui 'deadlock_zhtw_launcher.exe') `
               -title 'Deadlock zh-TW Launcher' -product 'Deadlock zh-TW Launcher' @common
 
-Compress-Archive -Path $gui -DestinationPath (Join-Path $dist 'Deadlock_zhTW_Updater_GUI.zip')
+Compress-Archive -Path $gui -DestinationPath (Join-Path $dist 'Deadlock_zhtw_updater_gui.zip')
 Write-Host 'OK  GUI zip' -ForegroundColor Green
