@@ -110,7 +110,7 @@
 		//"upgrade_slowing_bullets/modifier_slowing_bullets_proc/modifier_slow_base"					"Slowed"
 
 		//Spiritual Overflow
-		"upgrade_tech_overflow_desc"	"射擊敵方英雄時會<span class=\"highlight\">充能</span>，獲得額外的<span class=\"highlight\">射速</span>、<span class=\"highlight\">精神力量</span>與<span class=\"highlight\">精神吸血</span>。"
+		"upgrade_tech_overflow_desc"	"射擊英雄時會<span class=\"highlight\">充能</span>，獲得額外的<span class=\"highlight\">射速</span>、<span class=\"highlight\">精神力量</span>與<span class=\"highlight\">精神吸血</span>。"
 		"modifier_tech_overflow_building" "精神湧流累積中…"
 
 		"OverflowTechPower_label"		"精神力量"
@@ -305,7 +305,7 @@
 		"CasterHealthPercent_postfix"					"%"
 
 		//Burst Fire
-		"upgrade_burst_fire_desc"						"你的子彈命中敵方英雄時，短暫獲得<span class=\"highlight\">射速</span>與<span class=\"highlight\">移動速度</span>。"
+		"upgrade_burst_fire_desc"						"你的子彈命中英雄時，短暫獲得<span class=\"highlight\">射速</span>與<span class=\"highlight\">移動速度</span>。"
 
 		//Intensifying Magazine
 		"upgrade_intensifying_clip_desc"				"持續開火時，<span class=\"highlight\">武器傷害</span>會逐步提升。"
@@ -317,7 +317,7 @@
 		"ShootDurationForMax_postfix"							"秒"
 		
 		//Escalating Resilience
-		"upgrade_reinforcing_casings_desc"    "子彈命中敵方英雄時，獲得<span class=\"highlight\">子彈抗性</span>。<span class=\"highlight\">每次射擊只能提供一層。</span>"
+		"upgrade_reinforcing_casings_desc"    "子彈命中英雄時，獲得<span class=\"highlight\">子彈抗性</span>。<span class=\"highlight\">每次射擊只能提供一層。</span>"
 		"MaxArmorStacks_label"				"最高子彈抗性"
 		"MaxArmorStacks_postvalue_label"				"最高子彈抗性"
 		"MaxArmorStacks_postfix"				"%"
@@ -634,7 +634,7 @@
 		"upgrade_quick_silver_desc"				"你的灌注技能會隨時間累積{g:citadel_inline_attribute:'BonusSpiritDamage'}與{g:citadel_inline_attribute:'BonusFireRate'}，並在使用時<span class=\"highlight\">裝填子彈</span>。"
 
 		//Resonant Healing
-		"upgrade_resonant_healing_desc"			"施放技能時，短暫<span class=\"highlight\">治療</span>並獲得額外<span class=\"highlight\">移動速度</span>。"
+		"upgrade_resonant_healing_desc"			"戰鬥中施放技能時，短暫<span class=\"highlight\">治療</span>並獲得額外<span class=\"highlight\">移動速度</span>。"
 		"HealingPerCast_Label"					"施放技能時治療"
 
 		"HealingPerCast_postvalue_label"					"施放技能時治療"
@@ -751,8 +751,8 @@
 
 		//Debuff Remover | Dispel Magic
 		"upgrade_reduce_debuff_duration_active_desc"	"<span class=\"highlight\">淨化你身上所有非終極技能的負面效果</span>。若成功移除任何效果，則<span class=\"highlight\">治療自己</span>並獲得<span class=\"highlight\">移動速度加成</span>。<br><span class=\"diminish\">暈眩或睡眠時無法使用。</span>"
-		"HealOnActivate_label"		"啟動時治療的生命值"
-		"HealOnActivate_postvalue_label"		"啟動時治療的生命值"
+		"HealOnActivate_label"		"治療量"
+		"HealOnActivate_postvalue_label"		"治療量"
 
 		"damage_reduction_postfix"						"%"
 
@@ -867,7 +867,7 @@
 		"StackingGoldPerMinute_postvalue_label"			"每分鐘靈魂"
 		
 		// Indomitable
-		"upgrade_upgrade_auto_cleanse_desc"		"自動淨化下一個<span class=\"highlight\">暈眩、鎖縛、定身、睡眠或沉默</span>。觸發時，你會獲得<span class=\"highlight\">屏障</span>，且所有<span class=\"highlight\">技能冷卻時間</span>縮短 {s:CooldownReductionOnProc}%。"
+		"upgrade_upgrade_auto_cleanse_desc"		"自動淨化下一個<span class=\"highlight\">暈眩、鎖縛、定身、睡眠、沉默或恐懼</span>。觸發時，你會獲得<span class=\"highlight\">屏障</span>，且所有<span class=\"highlight\">技能冷卻時間</span>縮短 {s:CooldownReductionOnProc}%。"
 		
 		//-----------------------------------------------------------------------------
 		// Upgrades: Utility
@@ -884,22 +884,25 @@
 
 		//Shadow Weave
 		"upgrade_cloaking_device_active_desc"		"進入<span class=\"highlight\">隱形</span>狀態。隱形時每當你受到傷害，會短暫暴露行蹤。"
-		"upgrade_cloaking_device_active_ambush_desc"	"<br>攻擊或使用技能會結束隱形並發動<span class=\"highlight\">伏擊</span>，暫時獲得額外的<span class=\"highlight\">射速</span>、<span class=\"highlight\">精神力量</span>與<span class=\"highlight\">近戰傷害</span>。"
+		"upgrade_cloaking_device_active_ambush_desc"	"<br>攻擊或使用技能會結束隱形並發動<span class=\"highlight\">伏擊</span>，暫時獲得額外的<span class=\"highlight\">武器傷害</span>與<span class=\"highlight\">精神力量</span>。"
 		"modifier_cloaking_device_active_stealth"		"暗影編織——隱形"
 		"modifier_cloaking_device_active_ambush"		"暗影編織——伏擊"
 		"AmbushBonusTechPower_prefix"					"+"
 		"AmbushBonusTechPower_label"					"伏擊精神力量"
 		"AmbushBonusTechPower_postvalue_label"					"伏擊精神力量"
-		"AmbushBonusFireRate_prefix"					"+"
-		"AmbushBonusFireRate_label"					"伏擊射速"
-		"AmbushBonusFireRate_postvalue_label"					"伏擊射速"
-		"AmbushBonusFireRate_postfix"					"%"
+		"AmbushBonusWeaponDamage_prefix"					"+"
+		"AmbushBonusWeaponDamage_label"					"伏擊武器傷害"
+		"AmbushBonusWeaponDamage_postvalue_label"					"伏擊武器傷害"
+		"AmbushBonusWeaponDamage_postfix"					"%"
 		"AmbushBonusMeleeDamage_label"					"伏擊近戰傷害"
 		"AmbushBonusMeleeDamage_postvalue_label"		"伏擊近戰傷害"
 		"AmbushBonusMeleeDamage_postfix"				"%"
 		"AmbushDuration_label"						"伏擊持續時間"
 		"AmbushDuration_postvalue_label"						"伏擊持續時間"
 		"AmbushDuration_postfix"						"秒"
+		"AmbushBuildUpDuration_label"				"完全伏擊所需時間"
+		"AmbushBuildUpDuration_postvalue_label"		"完全伏擊所需時間"
+		"AmbushBuildUpDuration_postfix"				"秒"
 		"StealthDuration_label"						"隱形持續時間"
 		"StealthDuration_postvalue_label"						"隱形持續時間"
 		"StealthDuration_postfix"						"秒"
@@ -1016,13 +1019,10 @@
 		//-----------------------------------------------------------------------------
 		// Cosmetic
 		//----------------------------------------------------------------------------- 
-		"cosmetic_ability_snowball"		"雪球"
-		"cosmetic_ability_snowball_desc"		"向你的朋友與敵人投擲雪球。隨著你在<span class=\"highlight\">2025 假日挑戰</span>中的進度提升，射程與其他屬性也會提升。<br><br><span class=\"diminish\">向盟友投擲雪球不會造成傷害，並會重置其冷卻時間。</span>"
-		"SnowballSpeed_label"			"投擲速度"
-		"SnowballSpeed_postvalue_label"		"速度"
-		"SnowballSpeed_postfix"			"m/s"
-		"SnowballCount_label"			"投擲雪球數"
-		"SnowballCount_postvalue_label"		"投射物數"
+		"HealPerMinute_label"			"每分鐘治療量增加"
+		"TechPowerPerMinute_label"		"每分鐘精神力量增加"
+		"BonusFireRatePerMinute_label"		"每分鐘射速增加"
+		"BonusMoveSpeedPerMinute_label"		"每分鐘移動速度增加"
 
 		"cosmetic_item_voting_poster"		"張貼海報"
 	}

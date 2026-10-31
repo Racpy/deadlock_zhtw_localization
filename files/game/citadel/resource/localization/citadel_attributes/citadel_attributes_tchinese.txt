@@ -45,7 +45,7 @@
 		"Citadel_StatusEffectInvisible"			"隱形"
 		"Citadel_StatusEffectPetrify"			"石化"
 		"Citadel_StatusEffectCustomDebuff"		"減益"
-		//"Citadel_StatusEffectStacks"			"Stacks "
+		//"Citadel_StatusEffectStacks"			"Stacks"
 		"Citadel_StatusEffectInfiniteClip"		"無限彈藥"
 		//"Citadel_StatusEffectBulletDebuff"		"Bullet Debuff"
 		//"Citadel_StatusEffectBuff"				"Buff"
@@ -80,6 +80,7 @@
 		//"modifier_invis_start_delay" 			"Entering Stealth"
 		//"modifier_invis_fading"					"Fading"
 		//"modifier_camouflage_invis"				"Camouflaged"
+		"modifier_citadel_sleep"				"睡眠"
 		"modifier_citadel_silenced"				"沉默"
 		"silencer_immune"						"免疫沉默"
 		//"modifier_citadel_muted"				"Muted"
@@ -686,7 +687,6 @@
 		"TechArmorDamageReduction_prefix"				"{s:sign}"
 		"TechArmorDamageReduction_postfix"				"%"
 		"TechArmorDamageReduction_Label"				"精神抗性"
-
 		"TechArmorDamageReduction_postvalue_label"				"精神抗性"
 
 		"BulletResistReduction_label"		"子彈抗性"
@@ -1867,7 +1867,6 @@
 
 		"CurrentBonus_label"							"目前加成："
 		"CurrentBonus_postvalue_label"					"目前加成："
-
 
 		//"TimeToMaxStacks_label"							"Time To Max Stacks"
 		"TimeToMaxStacks_postfix"						"秒"
@@ -3125,6 +3124,10 @@
 		"GravityScale_label"					"重力倍率"
 		"GravityScale_postvalue_label"			"重力倍率"
 		"GravityScale_postfix"					"%"
+		"GravityScaleIncrease_label"			"重力倍率"
+		"GravityScaleIncrease_postvalue_label"	"重力倍率"
+		"GravityScaleIncrease_prefix"			"+"
+		"GravityScaleIncrease_postfix"			"%"
 
 		"AirBonusDamageGiven_label"					"空中傷害"
 		"AirBonusDamageGiven_postvalue_label"		"空中傷害"

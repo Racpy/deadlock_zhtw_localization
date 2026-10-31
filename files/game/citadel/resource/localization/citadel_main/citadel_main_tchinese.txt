@@ -767,7 +767,7 @@
 		"Citadel_RankedSeason_SeasonRank"			"賽季段位"
 		"Citadel_RankedSeason_HighestRank"			"最高段位"
 
-		"Citadel_RankedSeason_ProtectionRemaining"			"剩餘 {d:demotion_protection_remaining}/{d:demotion_protection_total} 次保護"
+		"Citadel_RankedSeason_ProtectionRemaining:f"			"剩餘 {d:demotion_protection_remaining}/{d:demotion_protection_total} {demotion_protection_total, plural, other{次保護}}"
 		"Citadel_RankedSeason_ProtectionUsed"			"已使用降級保護"
 		"Citadel_RankedSeason_ResultingRank"			"最終段位"
 		"Citadel_RankedSeason_HeroWins:f"	"{d:hero_wins} 勝"
@@ -1355,20 +1355,6 @@
 		"Citadel_Hud_KillFeedEnemyShield"							"聖壇"
 		"Citadel_Hud_KillFeedVehicle"								"載具"
 		"Citadel_Hud_KillFeedWorld"									"環境"
-
-		"Citadel_Hud_Toast_SeasonalAchievement2024Unlocked"			"{g:citadel_persona:account_id} 為 {s:hero_name} 達成了節慶歡樂成就！"
-		"Citadel_Showcase_SeasonalAchievement2024"					"2024 年 12 月"
-
-		"Citadel_Hud_Toast_SeasonalAchievement2025Unlocked"			"{g:citadel_persona:account_id} 解鎖了 {s:hero_name} 的裝飾品！"
-		"Citadel_Showcase_SeasonalAchievement2025"					"2025 年 12 月"
-
-		"Citadel_Hud_Toast_SeasonalKill"							"<span class=\"Emphasis\">{g:citadel_persona:killer_account_id}</span> 獲得一次"
-		"Citadel_Hud_Toast_SeasonalKill2"							"雪球擊殺！"
-
-		"Citadel_Event_Holiday_Challenge2025_Title"					"2025 假日挑戰"
-		"Citadel_Event_Holiday_Challenge2025_Desc"					"以每位英雄各贏下一場比賽，即可為你藏身處的聖誕樹獲得獨一無二的裝飾品。"
-		"Citadel_Event_Holiday_Challenge2025_Snowball"				"為你的樹加上更多裝飾品，升級你可投擲的<span class=\"Emphasis\">雪球</span>主動道具。"
-		"Citadel_Event_Holiday_Challenge2025_Snowball_Level"		"等級 {i:item_level} / {i:item_max_level}"
 
 		"Citadel_Hud_Voting_Poster_Tooltip_Header"					"選擇你的海報"
 		"Citadel_Hud_Voting_Poster_Tooltip_Selected"				"已選擇"
@@ -2862,6 +2848,9 @@
 		"citadel_hint_guided_arrow_boost" "按住 {g:citadel_binding:'Attack'} 加快箭矢速度。"
 		"citadel_hint_flying_strike_early_activate" "按下 {g:citadel_binding:'Attack'} 提前飛向你的目標。"
 
+		// Hud Hints 
+		"citadel_rejuvenator_hud_hint" "目前生效中回春器的剩餘時間；若沒有生效中的回春器，則顯示中頭目重生倒數。"
+
 		//-----------------------------------------------------------------------------
 		// Breakable Prop modifiers
 		//-----------------------------------------------------------------------------
@@ -2974,7 +2963,7 @@
 		"citadel_settings_hero"							"英雄"
 		"citadel_settings_hotkeys"						"按鍵設定"
 		"citadel_settings_steaminput"					"控制器"
-		"citadel_settings_steaminput_connected"			"已連線"
+		"citadel_settings_steaminput_connected:f"			"{controller_count, plural, other{已連線}}"
 		"citadel_ability_upgrade_tab_desc"				"{g:citadel_binding:'Scoreboard'} + [{g:citadel_binding:'Ability1'}/{g:citadel_binding:'Ability2'}/{g:citadel_binding:'Ability3'}/{g:citadel_binding:'Ability4'}] 可升級你的技能。這些是額外的按鍵綁定。"
 		"citadel_settings_per_unit_hotkeys"				"英雄專屬設定"
 		"citadel_settings_advanced"						"進階"
@@ -4453,7 +4442,6 @@
 		"menu_tphideout"							"傳送至藏身處"
 		"menu_shoparea"							    "中庭"
 		"menu_shoparea_sub"							"練習場"
-		"menu_seasonal_2025"						"假日挑戰"
 		"menu_new_violator"							"最新"
 		
 		
@@ -4731,8 +4719,8 @@
 		"LeaveMatchPrompt_Confirm"					"離開"
 		"LeaveMatchPrompt_Cancel"					"留下"
 
-		"Unranked_AbandonTriggerEarly"				"這場比賽不會計分。比賽將在 {d:end_game_countdown} 秒後結束。"
-		"Ranked_AbandonTriggerEarly"				"這場比賽不會計分。比賽將在 {d:end_game_countdown} 秒後結束。你的段位不會被調整。"
+		"Unranked_AbandonTriggerEarly:f"				"這場比賽不會計分。比賽將在 {d:end_game_countdown} {end_game_countdown, plural, other{秒}}後結束。"
+		"Ranked_AbandonTriggerEarly:f"				"這場比賽不會計分。比賽將在 {d:end_game_countdown} {end_game_countdown, plural, other{秒}}後結束。你的段位不會被調整。"
 
 		"AbandonTriggerTeam_Title"					"有玩家離開了比賽"
 		"Unranked_AbandonTriggerTeam"				"現在可以安心離開；若離開，這場比賽不會計分。若留下並獲勝，則會算作一場勝利。"
@@ -5012,11 +5000,11 @@
 		"HeroTesting_BotParry_Desc"						"所有機器人持續招架"
 		"HeroTesting_BotLightMelee_Desc"				"所有機器人持續輕擊"
 		"HeroTesting_BotHeavyMelee_Desc"				"所有機器人持續重擊"
-		"HeroTesting_BotAbility_Desc"					"所有機器人每隔幾秒施放這個技能，忽略其冷卻時間"
+		"HeroTesting_BotAbility_Desc"					"所有機器人都會施放這個技能，忽略其冷卻時間。"
 		"HeroTesting_BotAbilityStop_Desc"				"所有機器人停止施放技能"
-		"HeroTesting_BotItem_Desc"						"所有機器人每隔幾秒使用這個欄位的主動道具，忽略其冷卻時間"
+		"HeroTesting_BotItem_Desc"						"所有機器人都會使用這個欄位的主動道具，忽略其冷卻時間。"
 		"HeroTesting_BotItemStop_Desc"					"所有機器人停止使用道具"
-		"HeroTesting_BotUseAbilityRepeated_Desc"		"關閉時，機器人只會施放一次然後停止"
+		"HeroTesting_BotUseAbilityRepeated_Desc"		"開啟時，每隔幾秒重複施放。"
 		"HeroTesting_InfiniteMoney_Desc"				"購買道具時不需花費靈魂"
 		"HeroTesting_HideUI_Desc"					"隱藏 HUD（你的血條除外）與輪廓。按住 TAB 可再次顯示"
 		"HeroTesting_HideHealthBars_Desc"			"隱藏英雄與單位頭上的血條"
@@ -5871,10 +5859,8 @@
 		"Citadel_Hideout_News"		"號外！"
 		"Citadel_Hideout_News_Button"		"按下 {g:citadel_binding:'Interact'} 查看新聞"
 		"Citadel_Hideout_VoiceLines"		"按下 {g:citadel_binding:'Interact'} 聆聽對白台詞"
-		"Citadel_Hideout_XmasGlobeEarned_Temp"		"{s:hideout_owner} 在冬季更新期間獲得的紀念品"
 		"Citadel_Hideout_VaultHint01"				"{g:citadel_binding:'AbilityMelee'} 近戰可收集靈魂"
 		"Citadel_Hideout_VaultHint02"				"{g:citadel_binding:'AbilityMelee'} 燈光閃爍時近戰可獲得加成，重擊則更多"
-		"Citadel_Hideout_HolidayChallenge" 		"按下 {g:citadel_binding:'Interact'} 查看假日挑戰進度"
 		"Citadel_Hideout_HeavyCrate"		"按住 {g:citadel_binding:'AbilityMelee'} 以重擊打破"
 
 		"citadel_keybind_hideout_use"					"與藏身處物件互動"
@@ -5963,7 +5949,6 @@
 		"Citadel_Subtitles_Message_IconAndName"		"<child id='SpeakerIcon' /><b>{s:subtitle_actor}</b>：{s:subtitle_text}"
 		"Citadel_Subtitles_Message_Icon"			"<child id='SpeakerIcon' />：{s:subtitle_text}"
 		"npc_newscaster"							"新聞播報員"
-		"npc_seasonal"								"新聞播報員"
 		"npc_shopkeeper"							"奇珍商人"
 		"npc_broker"								"掮客"
 		"npc_spirit_jar"							"靈魂甕"
@@ -6131,7 +6116,9 @@
 		"map_district_building_campus"			"校園"
 		"map_district_building_belltower"		"鐘樓"
 
-
+		// Halloween
+		"AbilityButtonHint_HalloweenTroll"		"巨魔不給糖就搗蛋 - 重擊給予糖果"
+		"AbilityButtonHint_HalloweenCauldron"		"重擊領取糖果"
 	}
 }
 
