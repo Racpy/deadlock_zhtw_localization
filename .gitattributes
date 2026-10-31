@@ -6,3 +6,4 @@ files/** -text
 *.py  text eol=lf
 *.yml text eol=lf
 manifest.json text eol=lf
+*.ico binary

@@ -1,6 +1,6 @@
 name: Release client
 
-# 打 tag（例如 client-v1.0.0）時，把 client/ 打包成 zip 放到 Releases 供玩家下載
+# 打 tag（例如 client-v1.0.0）時，在 Windows 上編出兩種版本並放到 Releases
 on:
   push:
     tags:
@@ -11,16 +11,16 @@ permissions:
 
 jobs:
   release:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Zip client
-        run: |
-          cd client
-          zip -r ../deadlock_zhtw_localization-Updater.zip .
+      - name: Build GUI and NoGUI packages
+        shell: powershell
+        run: ./tools/build_client.ps1
 
       - name: Create release
+        shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$GITHUB_REF_NAME" deadlock_zhtw_localization-Updater.zip --generate-notes
+        run: gh release create "$GITHUB_REF_NAME" dist/*.zip --generate-notes

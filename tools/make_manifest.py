@@ -18,7 +18,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 SCHEMA = 1
-# 白名單：只允許這些目錄、這些副檔名（需與 client/config.json 保持一致）
+# 白名單：只允許這些目錄、這些副檔名（需與 client/core/deadlock_zhtw_localization.ps1 的 $Defaults 保持一致）
 DEFAULT_PREFIXES = ("game/citadel/", "game/citadel_tchinese/")
 DEFAULT_EXT = (".txt", ".vpk", ".gi", ".conf")
 VPK_MAGIC = b"\x34\x12\xaa\x55"  # VPK 檔頭 0x55AA1234（little-endian）
